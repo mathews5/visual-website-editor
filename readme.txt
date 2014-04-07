@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: MatthewTidio
-Tags: elements, widgets, tidio, chat, map, edit
+Tags: tidio, elements, visual, website, editor, buildier, wysiwyg
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.8
