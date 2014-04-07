@@ -59,6 +59,10 @@ inactive.
 3. Plugin Editing.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix bug with options.
+
 = 1.0 =
 * Initial release.
 
