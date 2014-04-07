@@ -1,4 +1,4 @@
-=== Tidio Elements ===
+=== Visual Website Editor ===
 Contributors: MatthewTidio
 Tags: elements, widgets, tidio, chat, map, edit
 Donate link: http://www.tidioelements.com/
