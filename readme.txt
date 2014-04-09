@@ -22,7 +22,7 @@ making changes to your Website will be easier than ever.
 You just need to click the "Go to Visual Editor" button after you install the 
 plugin and you will be taken to an advanced editor compatible with your Website.
 
-[youtube https://www.youtube.com/watch?v=BguQSTkKxVQ]
+[youtube http://www.youtube.com/watch?v=BguQSTkKxVQ]
 
 = How it works =
 You will be automatically logged into the editor on our site. Logging in is 
