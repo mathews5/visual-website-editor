@@ -29,6 +29,9 @@ You will be automatically logged into the editor on our site. Logging in is
 conducted through SECURE_AUTH_KEY defined in the wp-config.php file. Based on 
 this information the correct code will be sent to your site.
 
+After performing changes through the editor a Tidio Elements script allowing 
+changes in the website will be added to your site.
+
 == Installation ==
 1. Go to WordPress Control Panel
 1. Click "Plugins", then "Add New"
