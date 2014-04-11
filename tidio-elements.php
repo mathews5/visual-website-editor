@@ -4,7 +4,7 @@
  * Plugin Name: Visual Website Editor
  * Plugin URI: http://www.tidioelements.com
  * Description: Visual Website Editor for WordPress
- * Version: 1.0.1
+ * Version: 1.0.3
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiomobile.com
  * License: GPL2
@@ -55,7 +55,7 @@ class TidioVisualEditor {
     public function add_plugin_page() {
         // This page will be under "Settings"
         $option_page = add_menu_page(
-                'Visual Editor', 'Visual Editor', 'manage_options', 'tidio-visual-editor', array($this, 'create_admin_page'), plugins_url(basename(__DIR__) . '/img/icon.png')
+                'Visual Editor', 'Visual Editor', 'manage_options', 'tidio-visual-editor', array($this, 'create_admin_page'), plugins_url(basename(__DIR__) . '/media/img/icon.png')
         );
         $this->page_id = $option_page;
     }

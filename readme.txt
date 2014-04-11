@@ -63,6 +63,9 @@ inactive.
 
 == Changelog ==
 
+= 1.0.3 =
+* Change the way of code download
+
 = 1.0.1 =
 * Fix bug with options.
 
@@ -71,5 +74,6 @@ inactive.
 
 
 == Upgrade Notice ==
+
 = 1.0 =
 * Initial release.

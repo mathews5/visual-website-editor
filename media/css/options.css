@@ -1,0 +1,13 @@
+#tidio-top-logo {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+		
+	background-image: url('../img/brand-logo.png');
+	
+	display: block;
+	width: 180px;
+	height: 27px;
+	
+	
+}
