@@ -1,5 +1,13 @@
 <?php
 
+if(!class_exists('TidioPluginsScheme')){
+	require "classes/TidioPluginsScheme.php";	 
+}
+
+TidioPluginsScheme::registerPlugin('visual-editor');
+
+//
+
 require 'classes/VisualEditorOptions.php';
 
 $visualEditorOptions = new VisualEditorOptions();
@@ -19,6 +27,10 @@ if(!$visualEditorOptions->siteIsValid()){
 	$view['editorUrl'] = $visualEditorOptions->getEditorUrl();
 	
 }
+
+//
+
+$view['compatibilityPlugin'] = TidioPluginsScheme::compatibilityPlugin('visual-editor');
 
 //
 

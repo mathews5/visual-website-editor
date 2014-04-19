@@ -1,9 +1,9 @@
 === Visual Website Editor ===
 Contributors: MatthewTidio
-Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, simple
+Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
-Tested up to: 3.9
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -63,9 +63,6 @@ inactive.
 
 == Changelog ==
 
-= 1.0.3 =
-* Change the way of code download
-
 = 1.0.1 =
 * Fix bug with options.
 
@@ -74,6 +71,5 @@ inactive.
 
 
 == Upgrade Notice ==
-
 = 1.0 =
 * Initial release.
