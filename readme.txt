@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: MatthewTidio
-Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, simple, admin, winx, 1and1
+Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, winx, 1and1
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
