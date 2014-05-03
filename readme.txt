@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: MatthewTidio
-Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, winx, links, link, images, image, page, images, sidebar, posts, post, plugin 
+Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, winx, links, link, images, image, page, images, sidebar, posts, post, plugin, manager
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -17,10 +17,10 @@ Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
 intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
 Editor from [Tidio Elements](http://www.tidioelements.com/) - a simple and intuitive editor thanks to which
-making changes to your Website will be easier than ever. 
-
+making changes to your Website will be easier than ever.  
+            
 You just need to click the "Go to Visual Editor" button after you install the 
-plugin and you will be taken to an advanced editor compatible with your Website.
+plugin and you will be taken to an advanced editor compatible with your website.
 
 [youtube http://www.youtube.com/watch?v=KK6ptPwbgLE]
 
