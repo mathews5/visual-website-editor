@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Meet Visual Website Editor a plugin that will turn your WordPress into a fully 
 functional editor which makes editing/adding content easier than ever!
-
+            
 == Description ==
 
 Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
