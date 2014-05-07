@@ -21,7 +21,7 @@ making changes to your Website will be easier than ever.
             
 You just need to click the "Go to Visual Editor" button after you install the 
 plugin and you will be taken to an advanced editor compatible with your website.
-
+                                        
 [youtube http://www.youtube.com/watch?v=KK6ptPwbgLE]
 
 == Installation ==
