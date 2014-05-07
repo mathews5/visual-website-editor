@@ -55,6 +55,9 @@ inactive.
 
 == Changelog ==
 
+= 1.1.2 =
+* Fix invalid site url error
+
 = 1.1.1 =
 * Fix followlocation error
 

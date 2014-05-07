@@ -10,9 +10,34 @@ class VisualEditorOptions {
 	
 	public function __construct(){
 		
-		$this->siteUrl = get_option('siteurl');
-		
+		$this->siteUrl = $this->recognizeSiteUrl();
+				
 		$this->siteIsValid = $this->checkSiteIsValid();
+		
+	}
+	
+	public function recognizeSiteUrl(){
+		
+		if(!isset($_SERVER['HTTP_HOST']) || !isset($_SERVER['REQUEST_URI'])){
+			
+			return get_option('siteurl');
+			
+		}
+		
+		$siteUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+				
+		//
+		
+		preg_match('@(.*?)\/wp\-admin\/@si', $siteUrl, $matches);
+		
+		if(!empty($matches[1])){
+			
+			return $matches[1].'/';
+			
+		}
+		
+		return get_option('siteurl');
+		
 		
 	}
 	
