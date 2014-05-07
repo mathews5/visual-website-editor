@@ -92,7 +92,7 @@ class VisualEditorOptions {
 			
 		//
 		
-		$privateKey = md5(SECURE_AUTH_KEY);
+		$privateKey = md5(SECURE_AUTH_KEY.mt_rand(1,1000000).microtime());
 		
 		update_option('tidio-visual-private-key', $privateKey);
 		
