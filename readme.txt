@@ -18,7 +18,7 @@ intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
 Editor from [Tidio Elements](http://www.tidioelements.com/) - a simple and intuitive editor thanks to which
 making changes to your Website will be easier than ever.  
-                
+                                                    
 You just need to click the "Go to Visual Editor" button after you install the 
 plugin and you will be taken to an advanced editor compatible with your website.
                                         
