@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, editor, elements, visual, website, builder, wysiwyg, widget, visual editor, admin, links, link, image, page, images, sidebar, plugin, posts, tidio elements, facebook, social, plugins, post, twitter, google, comments
+Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, links, link, images, image, page, images, sidebar, posts, post, plugin, plugins
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -18,10 +18,10 @@ intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
 Editor from [Tidio Elements](http://www.tidioelements.com/) - a simple and intuitive editor thanks to which
 making changes to your Website will be easier than ever.  
-                                    
+                                  
 You just need to click the "Go to Visual Editor" button after you install the 
 plugin and you will be taken to an advanced editor compatible with your website.
-                                                    
+                                        
 [youtube http://www.youtube.com/watch?v=KK6ptPwbgLE]
 
 == Installation ==
@@ -40,20 +40,24 @@ plugin and you will be taken to an advanced editor compatible with your website.
 
 Automatic authorization for Tidio Elements editor is based on the 
 SECURE_AUTH_KEY defined in the wp-config.php file of your WordPress site.
-                                
+
 = What if Tidio Elements server goes down? =
 
 Activation of our script is carried out through a standard <script> tag.
 When accessing the server is not possible the script is not downloaded and the 
 site will work as it was before it was edited. It does not make the site 
 inactive.
-                                
+
 == Screenshots ==
 1. Content Editing.
 2. Color Scheme Editing.
 3. Plugin Editing.
 
 == Changelog ==
+
+= 1.2 =
+* Added compatibility with other Tidio plugins
+* Added compatibility with SEO!
 
 = 1.1.2 =
 * Fix invalid site url error

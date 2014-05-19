@@ -3,11 +3,7 @@
     <a href="http://www.tidioelements.com/?utm_source=wordpress&utm_medium=cpc&utm_campaign=plugin_inside" id="tidio-top-logo" target="_blank"></a>
     
     <h2>Visual Website Editor for WordPress</h2>
-    
-    <?php if(!$view['compatibilityPlugin']): ?>
-    <div class="alert alert-info" style="margin: 10px 0px 15px;">We're sorry, this plugin is not compatible with other Tidio Elements plugins - that is why it cannot be displayed on your site. To take advantage of all the possibilities our platform offers, please install <a href="http://wordpress.org/plugins/tidio-elements-integrator/" target="_blank" style="font-weight: bold;">Tidio Elements Integrator</a> plugin or uninstall the other plugins.</div>    
-    <?php endif; ?>
-    
+        
     <!-- -->
         
  	<?php if($view['mode']==='OK'): ?>

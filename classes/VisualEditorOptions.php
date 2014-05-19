@@ -8,6 +8,8 @@ class VisualEditorOptions {
 	
 	private $siteIsValid = true;
 	
+	private static $integratorProjectData;
+	
 	public function __construct(){
 		
 		$this->siteUrl = $this->recognizeSiteUrl();
@@ -46,6 +48,14 @@ class VisualEditorOptions {
 		if(!$this->siteIsValid)
 			
 			return '';
+		
+		// integrator options check
+		
+		if($this->integratorProjectData()){
+			
+			return self::$integratorProjectData['public_key'];
+			
+		}
 			
 		//
 
@@ -82,7 +92,15 @@ class VisualEditorOptions {
 			
 			return '';
 		
-		//
+		// integrator options check
+		
+		if($this->integratorProjectData()){
+			
+			return self::$integratorProjectData['private_key'];
+			
+		}
+		
+		// 
 		
 		$privateKey = get_option('tidio-visual-private-key');
 		
@@ -112,6 +130,27 @@ class VisualEditorOptions {
 		
 	}
 	
+	public function integratorProjectData(){
+		
+		if(self::$integratorProjectData!==null){
+			return self::$integratorProjectData;
+		}
+		
+		$options = get_option('tidio-elements-project-data');
+		
+		if(!$options){
+			self::$integratorProjectData = false;
+			return false;
+		}
+		
+		$options = json_decode($options, true);
+		
+		self::$integratorProjectData = $options;
+		
+		return self::$integratorProjectData;
+		
+	}
+		
 	private function checkSiteIsValid(){
 		
 		$urlParse = parse_url($this->siteUrl);
@@ -130,11 +169,13 @@ class VisualEditorOptions {
 		
 	}
 
-	private function getContentData($url, $urlGet = null){
+	private function getContentData($url, $urlData = array()){
 		
-		if($urlGet && is_array($urlGet)){
+		$urlData['_ip'] = $_SERVER['REMOTE_ADDR'];
+		
+		if(!empty($urlData)){
 			
-			$url = $url.'?'.http_build_query($urlGet);
+			$url = $url.'?'.http_build_query($urlData);
 			
 		}
 		
