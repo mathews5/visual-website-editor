@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, links, images, link, image, page, images, sidebar, plugin, posts, post, plugins
+Tags: tidio, elements, visual, website, editor, builder, wysiwyg, visual editor, widget, admin, images, links, link, image, page, images, sidebar, plugin, posts, post, plugins
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
