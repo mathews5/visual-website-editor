@@ -50,6 +50,10 @@ class TidioElementsParser {
 	}
 	
 	public static function render($html){
+				
+		$html = preg_replace('@\<head(.*?)\>@si', '<head>', $html, 1);
+		
+		//
 		
 		$doc = phpQuery::newDocument($html);
 		
@@ -60,6 +64,28 @@ class TidioElementsParser {
 		if(!$docHtml->attr('id')){
 			
 			$docHtml->attr('id', 'tidio-editor-page');
+			
+		}
+		
+		// If "head" dosen't exsits we gonna added ownself
+		
+		$eleHead = $doc->find('head');
+		
+		if(!$eleHead->length){
+			
+			$headContent = '';
+			
+			preg_match('@\<head\>(.*?)\<\/head\>@si', $html, $headMatches);
+			
+			if(!empty($headMatches[1])){
+				$headContent = $headMatches[1];
+			}
+			
+			//
+			
+			$eleHtml = $doc->find('html');
+			
+			$eleHtml->prepend('<head__>'.$headContent.'</head__>');
 			
 		}
 		
@@ -140,7 +166,11 @@ class TidioElementsParser {
 		
 		// Render HTML
 		
-		return $doc->htmlOuter();
+		$docHtml = $doc->htmlOuter();
+		
+		$docHtml = str_replace('head__', 'head', $docHtml);
+		
+		return $docHtml;
 		
 	}
 	

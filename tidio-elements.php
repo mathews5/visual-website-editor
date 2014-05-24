@@ -4,7 +4,7 @@
  * Plugin Name: Visual Website Editor
  * Plugin URI: http://www.tidioelements.com
  * Description: Visual Website Editor for WordPress powered by Tidio Elements
- * Version: 1.2
+ * Version: 1.2.1
  * Author: Tidio Ltd.
  * Author URI: http://www.tidioelements.com
  * License: GPL2
