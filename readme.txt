@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, elements, visual, builder, editor, visual editor, website, admin, wysiwyg, link, widget, links, images, image, page, images, sidebar, plugin, plugins, posts, post, social, facebook, twitter, google
+Tags: tidio, elements, visual, builder, visual editor, editor, website, admin, wysiwyg, link, widget, links, images, image, page, images, sidebar, plugin, plugins, posts, post, social, facebook, twitter, google
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -23,7 +23,7 @@ You just need to click the "Go to Visual Editor" button after you install the
 plugin and you will be taken to an advanced editor compatible with your website.
                                     
 [youtube http://www.youtube.com/watch?v=KK6ptPwbgLE]
-
+                                                
 == Installation ==
 1. Go to WordPress Control Panel
 1. Click "Plugins", then "Add New"
