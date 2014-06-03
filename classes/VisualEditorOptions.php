@@ -70,7 +70,8 @@ class VisualEditorOptions {
 		$apiData = $this->getContentData($this->apiHost.'editor-visual/accessProject?'.http_build_query(array(
 			'key' => $this->getPrivateKey(),
 			'url' => $this->siteUrl,
-			'cms' => 'wordpress'
+			'platform' => 'wordpress',
+                        '_ip' => $_SERVER['REMOTE_ADDR']
 		)));
 		
 		$apiData = json_decode($apiData, true);
@@ -170,9 +171,7 @@ class VisualEditorOptions {
 	}
 
 	private function getContentData($url, $urlData = array()){
-		
-		$urlData['_ip'] = $_SERVER['REMOTE_ADDR'];
-		
+				
 		if(!empty($urlData)){
 			
 			$url = $url.'?'.http_build_query($urlData);
