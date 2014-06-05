@@ -15,9 +15,10 @@ class TidioElementsParser {
 	private static $editedElements = array();
 	private static $sitePath;
 	private static $htmlElements = array();
-		
-	public static function start($projectPublicKey){
+	public static $cacheDirectory = null;
 			
+	public static function start($projectPublicKey){
+						
 		self::$sitePath = $_SERVER['REQUEST_URI'];
 		
 		if(empty(self::$sitePath)){
@@ -29,12 +30,17 @@ class TidioElementsParser {
 		self::$projectPublicKey = $projectPublicKey;
 				
 		self::loadApiData();
-					
+		
+		self::refreshApiDataCache();
+		
+		//
+							
 		if(!self::$apiData)
 			
 			return false;
 																			
 		ob_start('TidioElementsParser::render');
+		
 		
 	}
 
@@ -45,12 +51,12 @@ class TidioElementsParser {
 			return false;
 		
 		@ob_end_flush();
-		
+				
 		
 	}
 	
 	public static function render($html){
-				
+									
 		$html = preg_replace('@\<head(.*?)\>@si', '<head>', $html, 1);
 		
 		//
@@ -105,16 +111,22 @@ class TidioElementsParser {
 					
 				}
 								
-				//	
-					
-				$selector = $e['selector'];
-					
-				$ele = $doc->find($selector);
-					
-				if(!$ele->length)
-						
-					continue;
+				//
 				
+				$ele = null;
+				
+				if(!empty($e['data']['selector_source'])){
+					$ele = $doc->find($e['data']['selector_source']);
+				}
+				
+				if(!$ele || !$ele->length){
+					$ele = $doc->find($e['selector']);
+				}
+				
+				if(!$ele || !$ele->length){
+					continue;
+				}
+									
 				//
 				
 				if($e['type']=='edit'){
@@ -169,7 +181,7 @@ class TidioElementsParser {
 		$docHtml = $doc->htmlOuter();
 		
 		$docHtml = str_replace('head__', 'head', $docHtml);
-		
+				
 		return $docHtml;
 		
 	}
@@ -197,14 +209,25 @@ class TidioElementsParser {
 		
 	}
 		
-	private static function loadApiData(){
+	private static function loadApiData($noCache = false){
+			
+		if(!$noCache){	
+			
+			self::$apiData = self::getApiDataCache();	
+			
+			if(self::$apiData){
+				return true;
+			}
+		
+		}
+				
+		//
 		
 		$apiUrl = self::$apiHost.'?projectPublicKey='.self::$projectPublicKey;
 				
 		$apiData = self::loadUrlData($apiUrl);
 		
 		if(!$apiData)
-			
 			return false;
 			
 		$apiData = json_decode($apiData, true);
@@ -220,13 +243,62 @@ class TidioElementsParser {
 		if(self::$apiData==null){	
 			self::$apiData = true;
 		}
-		
+				
 		
 		return true;		
 	}
 	
-	private static function loadUrlData($url){
+	// AddOn Get Cache
+	
+	private static function getApiDataCache($reload = false){
 		
+		$cache = get_option('tidio-visual-cache');
+		
+		if(!$cache || $reload){
+			
+			self::loadApiData(true);
+			
+			$cache = serialize(self::$apiData);
+			
+			update_option('tidio-visual-cache', $cache);
+			
+			// Update Parser Status
+			
+			self::updateParserStatus('1');
+			
+		}
+		
+		return unserialize($cache);
+		
+	}
+	
+	private static function updateParserStatus($status){
+		
+		self::loadUrlData('http://www.tidioelements.com/apiEditor/updateParserStatus/'.self::$projectPublicKey.'?parserStatus='.$status);
+		
+	}
+	
+	private static function refreshApiDataCache(){
+		
+		if(empty($_GET['tidioElementsRefreshCache'])){
+			return false;
+		}
+		
+		self::getApiDataCache(true);
+		
+		echo json_encode(array(
+			'status' => true,
+			'value' => true
+		));
+		
+		exit;
+		
+	}
+	
+	//
+		
+	private static function loadUrlData($url){
+				
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -235,9 +307,16 @@ class TidioElementsParser {
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36');
 		$content = curl_exec($ch);
 		curl_close($ch);
-		
+			
 		return $content;
 		
 	}
 	
 }
+
+$wpUpload = wp_upload_dir();
+
+TidioElementsParser::$cacheDirectory = $wpUpload['basedir'].'/tidioElementsCache/';
+
+
+

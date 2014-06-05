@@ -55,6 +55,9 @@ inactive.
 
 == Changelog ==
 
+= 1.3 =
+* Added cache
+
 = 1.2 =
 * Added compatibility with other Tidio plugins
 * Added compatibility with SEO!
