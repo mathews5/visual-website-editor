@@ -55,6 +55,9 @@ inactive.
 
 == Changelog ==
 
+= 1.3.1 =
+* Fixed problem with custom html doctypes
+
 = 1.3 =
 * Added cache
 

@@ -59,7 +59,28 @@ class TidioElementsParser {
 									
 		$html = preg_replace('@\<head(.*?)\>@si', '<head>', $html, 1);
 		
-		//
+		// Prepare "html"	
+				
+		// Replace "doctype"
+		
+		preg_match('@(.*?)\<html>@si', $html, $htmlTagMatch);
+		
+		$htmlDoctypeReplace = '';
+		
+		if(strstr(strtolower($htmlTagMatch[1]), 'dtd xhtml')){ // is xhtml
+			$htmlDoctypeReplace = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+		} else if(strstr(strtolower($htmlTagMatch[1]), 'dtd html 4')){ // is html4
+			$htmlDoctypeReplace = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">';
+		} else if(strstr(strtolower($htmlTagMatch[1]), '<!doctype html')){ //is html5
+			$htmlDoctypeReplace = '<!doctype html>';
+		}
+		
+		
+		if(!empty($htmlDoctypeReplace)){
+			$html = str_replace($htmlTagMatch[1], $htmlDoctypeReplace, $html);
+		}
+				
+		// Render
 		
 		$doc = phpQuery::newDocument($html);
 		
@@ -68,11 +89,9 @@ class TidioElementsParser {
 		$docHtml = $doc->find('html');
 		
 		if(!$docHtml->attr('id')){
-			
 			$docHtml->attr('id', 'tidio-editor-page');
-			
 		}
-		
+				
 		// If "head" dosen't exsits we gonna added ownself
 		
 		$eleHead = $doc->find('head');
