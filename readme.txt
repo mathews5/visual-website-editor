@@ -12,7 +12,7 @@ Meet Visual Website Editor a plugin that will turn your WordPress into a fully
 functional editor which makes editing/adding content easier than ever!
             
 == Description ==
-                                                
+                        
 Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
 intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
