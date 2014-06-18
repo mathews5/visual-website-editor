@@ -16,19 +16,13 @@ $visualEditorOptions = new VisualEditorOptions();
 
 //
 
-
 $view = array();
 
 if(!$visualEditorOptions->siteIsValid()){
-	
 	$view['mode'] = 'ERR_INVALID_URL';
-	
 } else {
-	
 	$view['mode'] = 'OK';
-	
 	$view['editorUrl'] = $visualEditorOptions->getEditorUrl();
-	
 }
 
 //
