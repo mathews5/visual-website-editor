@@ -14,8 +14,6 @@ if(!class_exists('VisualEditorOptions')){
 
 $visualEditorOptions = new VisualEditorOptions();
 
-//
-
 $view = array();
 
 if(!$visualEditorOptions->siteIsValid()){
