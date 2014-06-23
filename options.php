@@ -6,8 +6,6 @@ if(!class_exists('TidioPluginsScheme')){
 
 TidioPluginsScheme::registerPlugin('visual-editor');
 
-//
-
 if(!class_exists('VisualEditorOptions')){
 	require 'classes/VisualEditorOptions.php';
 }
@@ -22,8 +20,6 @@ if(!$visualEditorOptions->siteIsValid()){
 	$view['mode'] = 'OK';
 	$view['editorUrl'] = $visualEditorOptions->getEditorUrl();
 }
-
-//
 
 wp_register_style('tidio-chat-css', plugins_url('media/css/options.css', __FILE__) );
 
