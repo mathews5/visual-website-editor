@@ -3,10 +3,8 @@
     <a href="http://www.tidioelements.com/?utm_source=wordpress&utm_medium=cpc&utm_campaign=plugin_inside" id="tidio-top-logo" target="_blank"></a>
     
     <h2>Visual Website Editor for WordPress</h2>
-        
-    <!-- -->
-        
- 	<?php if($view['mode']==='OK'): ?>
+    
+        <?php if($view['mode']==='OK'): ?>
     
     <p>Click "Go to Visual Editor" to continue to your Website's visual editor.</p>
     
