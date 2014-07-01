@@ -15,6 +15,7 @@ class TidioElementsParser {
 	private static $editedElements = array();
 	private static $sitePath;
 	private static $htmlElements = array();
+	private static $parseMode = false;
 	public static $cacheDirectory = null;
 			
 	public static function start($projectPublicKey){
@@ -30,15 +31,17 @@ class TidioElementsParser {
 		self::$projectPublicKey = $projectPublicKey;
 				
 		self::loadApiData();
-		
+		 
 		self::refreshApiDataCache();
 		
 		//
-							
-		if(!self::$apiData)
-			
+											
+		if(!self::$apiData || !is_array(self::$apiData) || empty(self::$apiData['wysiwyg_elements']) || ini_get('allow_url_fopen')!=='1'){
 			return false;
-																			
+		}
+					
+		self::$parseMode = true;
+
 		ob_start('TidioElementsParser::render');
 		
 		
@@ -46,7 +49,7 @@ class TidioElementsParser {
 
 	public static function end(){
 
-		if(!self::$apiData)
+		if(!self::$apiData || !self::$parseMode)
 			
 			return false;
 		

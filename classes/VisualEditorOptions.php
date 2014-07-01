@@ -71,7 +71,7 @@ class VisualEditorOptions {
 			'key' => $this->getPrivateKey(),
 			'url' => $this->siteUrl,
 			'platform' => 'wordpress',
-                        '_ip' => $_SERVER['REMOTE_ADDR']
+			'_ip' => $_SERVER['REMOTE_ADDR']
 		)));
 		
 		$apiData = json_decode($apiData, true);
@@ -101,7 +101,7 @@ class VisualEditorOptions {
 			
 		}
 		
-		// 
+		//  
 		
 		$privateKey = get_option('tidio-visual-private-key');
 		

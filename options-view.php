@@ -12,7 +12,7 @@
             
     <?php endif; ?>
     
-    <?php if($view['mode']==='ERR_INVALID_URL'): ?>
+    <?php if($view['mode']==='ERR_INVALID_URL'): ?> 
     
     <p>Sorry <strong>Visual Website Editor</strong> doesn't support localhost sites.</p>
     
