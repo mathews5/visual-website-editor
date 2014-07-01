@@ -111,7 +111,7 @@ class TidioVisualEditor {
 	public function adminJS(){
 		
 		// Stop if site is on localhost
-		if($_SERVER['HTTP_HOST']=='localhost' && 1==2){
+		if($_SERVER['HTTP_HOST']=='localhost'){
 			return false;
 		}
 
