@@ -81,7 +81,6 @@ class TidioVisualEditor {
 	public function ajaxVisualEditorRedirect(){
 		
 		$view = array(); 
-		
 		if(get_option('tidio-visual-private-key')){
 			
 			$view['mode'] = 'redirect';
