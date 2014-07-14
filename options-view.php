@@ -2,7 +2,7 @@
 	
     <a href="http://www.tidioelements.com/?utm_source=wordpress&utm_medium=cpc&utm_campaign=plugin_inside" id="tidio-top-logo" target="_blank"></a>
     
-    <h2>Visual Website Editor for WordPress</h2>
+    <h2>Visual Website Editor</h2>
     
         <?php if($view['mode']==='OK'): ?>
     
@@ -17,5 +17,5 @@
     <p>Sorry <strong>Visual Website Editor</strong> doesn't support localhost sites.</p>
     
     <?php endif; ?>
-    
+
 </div>

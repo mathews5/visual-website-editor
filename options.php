@@ -24,4 +24,5 @@ wp_register_style('tidio-chat-css', plugins_url('media/css/options.css', __FILE_
 
 wp_enqueue_style('tidio-chat-css' );
 
+
 require 'options-view.php';
