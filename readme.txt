@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, builder, widget, link, admin, links, images, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
+Tags: tidio, builder, widget, link, links, admin, images, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -18,7 +18,7 @@ intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
 Editor from [Tidio Elements](http://www.tidioelements.com/) - a simple and intuitive editor thanks to which
 making changes to your Website will be easier than ever.  
-                                        
+                    
 You just need to click the "Go to Visual Editor" button after you install the 
 plugin and you will be taken to an advanced editor compatible with your website.
                                     
