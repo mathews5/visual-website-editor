@@ -55,6 +55,9 @@ inactive.
 
 == Changelog ==
 
+= 1.4.1 =
+* Fixed "foreach" error
+
 = 1.3.1 =
 * Fixed problem with custom html doctypes
 

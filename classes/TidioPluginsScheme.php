@@ -88,8 +88,12 @@ class TidioPluginsScheme {
 	public static function pluginToLoadLength(){
 		
 		self::getPlugins();
-		
-		$length = 0;
+
+		if(!self::$plugins){
+                    return 0;
+		}
+
+                $length = 0;
 		
 		foreach(self::$plugins as $e){
 			
