@@ -321,9 +321,16 @@ class TidioElementsParser {
 		
 	private static function loadUrlData($url){
 				
-		$content = file_get_contents($url);
-                
-                return $content;
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36');
+		$content = curl_exec($ch);
+		curl_close($ch);
+			
+		return $content;
 		
 	}
 	
