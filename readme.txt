@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, builder, widget, links, images, link, admin, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
+Tags: tidio, builder, widget, links, link, images, admin, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -12,7 +12,7 @@ Meet Visual Website Editor a plugin that will turn your WordPress into a fully
 functional editor which makes editing/adding content easier than ever!
             
 == Description ==
-                                
+                        
 Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
 intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
@@ -42,7 +42,7 @@ Automatic authorization for Tidio Elements editor is based on the
 SECURE_AUTH_KEY defined in the wp-config.php file of your WordPress site.
                 
 = What if Tidio Elements server goes down? =
-
+                
 Activation of our script is carried out through a standard <script> tag.
 When accessing the server is not possible the script is not downloaded and the 
 site will work as it was before it was edited. It does not make the site 
