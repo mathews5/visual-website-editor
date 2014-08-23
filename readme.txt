@@ -1,6 +1,6 @@
 === Visual Website Editor ===
 Contributors: tytus-tytus
-Tags: tidio, admin, links, builder, images, widget, link, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
+Tags: tidio, admin, images, links, builder, widget, link, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -12,7 +12,7 @@ Meet Visual Website Editor a plugin that will turn your WordPress into a fully
 functional editor which makes editing/adding content easier than ever!
             
 == Description ==
-                                    
+                                            
 Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
 intuitiveness? Do you have a tough time whenever you want to change a font color
 or remove/add an element, while they do it on the spot? Meet Visual Website
@@ -23,7 +23,7 @@ You just need to click the "Go to Visual Editor" button after you install the
 plugin and you will be taken to an advanced editor compatible with your website.
 
 [youtube http://www.youtube.com/watch?v=KK6ptPwbgLE]
-            
+        
 == Installation ==
 1. Go to WordPress Control Panel
 1. Click "Plugins", then "Add New"
