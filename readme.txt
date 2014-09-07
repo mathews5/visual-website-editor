@@ -3,7 +3,7 @@ Contributors: tytus-tytus
 Tags: tidio, admin, links, images, widget, builder, link, website, image, page, images, sidebar, plugin, plugins, posts, post, facebook
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
